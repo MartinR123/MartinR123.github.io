@@ -2,7 +2,7 @@
 <html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Farger</title>
+    <title>RGB</title>
 
 <style>
 
@@ -33,7 +33,6 @@
 
         line-height: 1.5;
     }
-
 
 
     #container {
@@ -72,42 +71,40 @@
         top: -370px;
     }
 
-
-
     .image {
         display: block;
 
         width: 100%;
         height: auto;
-    }
+        }
 
     .overlay {
         position: relative;
-        top: -145.5px;
+        top: -146px;
 
         height: 180px;
         width: 180px;
-        
+
         opacity: 0;
         transition: .5s ease;
-    }
+        }
 
     #container > div:hover .overlay {
         opacity: 1;
-    }
+        }
 
     .text {
         font-size: 20px;
         position: absolute;
         top: 50%;
         left: 50%;
-
+        
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         
         text-align: center;
-    }
+        }
 
     .info {
         position: relative;
@@ -142,9 +139,6 @@
         background-color: red;
     }
 
-    #oransje {
-        background-color: orange;
-    }
 
     #gul {
         background-color: yellow;
@@ -162,12 +156,33 @@
         background-color: blue;
     }
 
-    #fiolett {
-        background-color: violet;
+    #rosa {
+        background-color: rgb(255, 192, 203);
     }
 
+    #rød_rgba {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
 
+    #gul_rgba {
+        background-color: rgba(255, 255, 0, 0.4);
+    }
 
+    #grønn_rgba {
+        background-color: rgba(0, 255, 0, 0.75);
+    }
+
+    #turkis_rgba{
+        background-color: rgba(48, 213, 200, 0.15);
+    }
+
+    #blå_rgba {
+        background-color: rgba(0, 0, 255, 0.25);
+    }
+
+    #rosa_rgba {
+        background-color: rgba(255, 192, 203, 0.6);
+    }
 </style>
 
 </head>
@@ -175,59 +190,66 @@
 <body>
 
     <div id="side">
-        <h1>Farger</h1>
 
-        <p class="avsnitt">En farge kan defineres som en opplevelse av lys med forskjellig intensitet og bølgelengde. Det er en opplevelse som stammer fra de tre forskjellige typene tapper som er i øyet.  Mennesker kan skille mellom tre og syv millioner farger. <br> Lys med forskjellige bølgelengder oppleves som forskjellige farger. Dette er det en oversikt over i tabellen under. <br> Farger kan deles inn i tre forskjellige kategorier; De fysiske fargene, de kjemiske fargene og de fysiologiske fargene. De fysiske fargene er hvordan man opplever lys som kommer fra en lyskilde som forskjellige farger. De kjemiske fargene er hvordan lyset oppleves når det reflekteres fra overflater og objekter. De fysiologiske fargene er hvordan synssansen opplever fargeintrykk basert på hvilken sammenheng man ser fargen i. <br> I CSS kan det brukes flere forskjellige fargemodeller. Noen av de fargemodellene som brukes kan det leses mer om nederst på siden.  </p>
+        <h1>RGB</h1>
 
-
+        <p class="avsnitt">RGB står for rød, grønn og blå. For å bruke RGB angir man en verdi fra 0 til 255 for hver av de tre fargene, og man kan dermed lage mange forskjellige fargekombinasjoner. For å regne ut hvor mange forskjellige farger man kan lage må man gange 255 med seg selv tre ganger(255^3). Det betyr at det er mulig å lage 16 777 216 forskjellige farger. <br> I tillegg kan man legge til en verdi mellom 0 og 1 etter R, G og B. Denne verdien "a(alpha)" bestemmer gjennomsiktigheten til fargen, der 0 er helt gjennomsiktig og 1 er helt synlig.<br>Ved å sette RGB(0, 0, 0) vil man da få svart, og ved å dette RGB(255, 255, 255) vil man da få hvitt. Under er det en tabell som viser andre farger på RGB-form.</p>
 
         <div id="tabell">
 
             <table>
                 <thead>
                     <tr>
-                        <th colspan="3">Bølgeintervall for fargene i det synlige spekteret</th>
+                        <th colspan="5">Oversikt over noen farger i rgb(a)</th>
                     </tr>
                     <tr>
-                        <th colspan="2">Farge</th>
-                        <th>Bølgeintervall</th>
+                        <th>Farge</th>
+                        <th colspan="2">RGB</th>
+                        <th colspan="2">RGBA</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Rød</td>
+                        <td>(255, 0, 0)</td>
                         <td id="rød"></td>
-                        <td>625-740 nm</td>
-                    </tr>
-                    <tr>
-                        <td>Oransje</td>
-                        <td id="oransje"></td>
-                        <td>590-625 nm</td>
-                    </tr>
-                    <tr>
-                        <td>Gul</td>
-                        <td id="gul"></td>
-                        <td>565-590 nm</td>
+                        <td>(255, 0, 0, 0.5)</td>
+                        <td id="rød_rgba"></td>
                     </tr>
                     <tr>
                         <td>Grønn</td>
+                        <td>(0, 255, 0)</td>
                         <td id="grønn"></td>
-                        <td>500-565 nm</td>
-                    </tr>
-                    <tr>
-                        <td>Turkis</td>
-                        <td id="turkis"></td>
-                        <td>485-500 nm</td>
+                        <td>(0, 255, 0, 0.75)</td>
+                        <td id="grønn_rgba"></td>
                     </tr>
                     <tr>
                         <td>Blå</td>
+                        <td>(0, 0, 255)</td>
                         <td id="blå"></td>
-                        <td>440-500 nm</td>
+                        <td>(0, 0, 255, 0.25)</td>
+                        <td id="blå_rgba"></td>
                     </tr>
                     <tr>
-                        <td>Fiolett</td>
-                        <td id="fiolett"></td>
-                        <td>380-440 nm</td>
+                        <td>Rosa</td>
+                        <td>(255, 192, 203)</td>
+                        <td id="rosa"></td>
+                        <td>(255, 192, 203, 0.6)</td>
+                        <td id="rosa_rgba"></td>
+                    </tr>
+                    <tr>
+                        <td>Gul</td>
+                        <td>(255, 255, 0)</td>
+                        <td id="gul"></td>
+                        <td>(255, 255, 0, 0.4)</td>
+                        <td id="gul_rgba"></td>
+                    </tr>
+                    <tr>
+                        <td>Turkis</td>
+                        <td>(48, 213, 200)</td>
+                        <td id="turkis"></td>
+                        <td>(48, 213, 200, 0.15)</td>
+                        <td id="turkis_rgba"></td>
                     </tr>
                 </tbody>
             </table>
@@ -237,11 +259,10 @@
         <h3>Fargemodeller</h3>
 
         <div id="container">
-
-            <div id="rgb">
-                <img src="rgb.jpg" width="180px" height="180px" alt="Bilde av fyrstikker med rød, grønn og blå farge" class="image">  
-                <div class="overlay"><div class="text"> <a href="rgb.html"><img src="bakgrunnsfarge.jpg" width="180px" height="180px"></a><p class="info">Informasjon</p></div></div>
-                <p>RGB</p>
+            <div id="farger">
+                <img src="farger.jpg" width="180px" height="180px" alt="Bilde av farger" class="image">  
+                <div class="overlay"><div class="text"> <a href="index.html"><img src="bakgrunnsfarge.jpg" width="180px" height="180px"></a><p class="info">Informasjon</p></div></div>
+                <p>Farger</p>
             </div>
 
 
@@ -257,8 +278,9 @@
                 <div class="overlay"><div class="text"> <a href="heksadesimale_fargekoder.html"><img src="bakgrunnsfarge.jpg" width="180px" height="180px"></a><p class="info">Informasjon</p></div></div>
                 <p>Heksadesimale Fargekoder</p>
             </div>
-
         </div>
-    </div>
+
+</div>
+    
 </body>
 </html>

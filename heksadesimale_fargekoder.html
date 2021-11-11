@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Heksadesimale Fargekoder</title>
+
+<style>
+
+#side {
+        padding: 20px;
+        margin: auto 150px;
+
+        border: 1px solid black;
+        border-radius: 30px;
+        background-color: rgb(200, 220, 250);
+
+    }
+
+    h1 {
+        margin: 20px 70px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    ul {
+        margin: 20px 50px;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+
+    }
+
+    .avsnitt {
+        width: 90%;
+        margin: 0px auto;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+
+        line-height: 1.5;
+    }
+
+    #container {
+        border-radius: 15px;
+        border: 1px solid black;
+
+        width: 70%;
+        height: 70%;
+
+        margin: 10px auto;
+
+        background-color: rgba(225, 225, 75, 0.7);
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    #container > div {
+        width: 180px;
+        height: 180px;
+
+        border: 1px solid black;
+
+        margin: 15px auto;
+    }
+
+
+    #container > div > p {
+        text-align: center;
+
+        position: relative;
+        top: -370px;
+    }
+
+    .image {
+        display: block;
+
+        width: 100%;
+        height: auto;
+        }
+
+    .overlay {
+        position: relative;
+        top: -145.5px;
+
+        height: 180px;
+        width: 180px;
+
+        opacity: 0;
+        transition: .5s ease;
+        }
+
+    #container > div:hover .overlay {
+        opacity: 1;
+        }
+
+    .text {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        
+        text-align: center;
+        }
+
+    .info {
+        position: relative;
+        top: -130px;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <div id="side">
+
+        <h1>Heksadesimale Fargekoder</h1>
+
+        <p class="avsnitt">Heksadesimale fargekoder er helt likt RGB bortsett fra måten det skrives på. I det heksadesimale fargesystemet brukes sekstentallsystemet, og ikke titallsystemet. Det heksadesimale fargesystemet skrives først med en hashtag etterfulgt av tallet for verdien av mengden rød i sekstentallsystemet, så mengden grønn i sekstentallsystemet og til slutt mengden blå i sekstentallsystemet.<br>For å gjøre om fra et tall i sekstentallsystemet til titallsystemet må man multiplisere verdien til det første tegnet i titallsystemet med 15 og addere verdien til det andre tegnet i titallsystemet. Under er det noen eksempler.</p>
+
+        <ul>
+            <li> #ff0000 = RGB(255, 0, 0) </li>
+            <li> #ffffff = RGB(255, 255, 255) </li>
+            <li> #909090 = RGB(135, 135, 135) </li>
+          </ul>
+
+        <h3>Fergemodeller</h3>
+
+        <div id="container">
+            <div id="rgb">
+                <img src="rgb.jpg" width="180px" height="180px" alt="Bilde av fyrstikker med rød, grønn og blå farge" class="image">  
+                <div class="overlay"><div class="text"> <a href="rgb.html"><img src="bakgrunnsfarge.jpg" width="180px" height="180px"></a><p class="info">Informasjon</p></div></div>
+                <p>RGB</p>
+            </div>
+
+
+            <div id="hsl">
+                <img src="hsl.jpg" width="180px" height="180px" alt="Bilde av fargehjul" class="image">  
+                <div class="overlay"><div class="text"> <a href="hsl.html"><img src="bakgrunnsfarge.jpg" width="180px" height="180px"></a><p class="info">Informasjon</p></div></div>
+                <p>HSL</p>
+            </div>
+
+
+            <div id="farger">
+                <img src="farger.jpg" width="180px" height="180px" alt="Bilde av farger" class="image">  
+                <div class="overlay"><div class="text"> <a href="index.html"><img src="bakgrunnsfarge.jpg" width="180px" height="180px"></a><p class="info">Informasjon</p></div></div>
+                <p>Farger</p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
