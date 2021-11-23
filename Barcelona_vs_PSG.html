@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Barca vs PSG</title>
+
+    <style>
+
+        #lineup {
+            width: 1280px;
+            margin: 0px auto;
+
+            
+        }
+
+        #lineup > div {
+            background-color:rgb(233, 250, 250);
+            height: 100px;
+            width: 100px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 15%;
+        }
+
+        #lineup > div > p {
+            text-align: center;
+            position: relative;
+            top: -5px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+            white-space: nowrap;
+
+        }
+
+        img {
+            position: relative;
+            left: 10px;
+        }
+
+        #overskrift {
+            background-color: rgb(233, 250, 250);
+            border: 1px solid black;
+            text-align: center;
+            height: 250px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            
+            position: relative;
+            left: 10px;
+        }
+
+        #ikon1 {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+
+        #ikon2 {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+        }
+/*
+        a:hover {
+            border: 5px solid lightblue;
+        }
+*/
+        #overskrift > p {
+            position: relative;
+            top: 40px;
+            font-size: 20px;
+        }
+        #overskrift > h1 {
+            position: relative;
+            top: 40px;
+            font-size: 70px;
+        }
+
+        #mål {
+            margin: 10px auto;
+            padding: 0px;
+            border: 1px solid black;
+            background-color: rgb(233, 250, 250);
+            width: 1000px;
+            height: 200px;
+
+            position: relative;
+        }
+
+        #mål_overskrift {
+            position: relative;
+            left: 480px;
+        }
+
+        #målb {
+            font-family: Arial, Helvetica, sans-serif;
+            /*border: 1px solid black;*/
+            background-color: rgb(233, 250, 250);
+            text-align: center;
+            padding: 5px;
+            width: 380px;
+
+            position: relative;
+            left: 10px;
+            top: -55px;
+
+        }
+
+        #målp {
+            font-family: Arial, Helvetica, sans-serif;
+            /*border: 1px solid black;*/
+            background-color: rgb(233, 250, 250);
+            text-align: center;
+            padding: 5px;
+            width: 380px;
+            height: 180px;
+
+            position: relative;
+            top: -250px;
+            left: 600px;
+        }
+
+        #b_formasjon {
+            background-color: rgb(5, 190, 5);
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+
+            width: 1270px;
+
+            position: relative;
+            left: 37px;
+
+        }
+
+        #p_formasjon {
+            background-color: rgb(5, 190, 5);
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px;
+
+            width: 1270px;
+
+            position: relative;
+            left: 37px;
+            top: -2690px;
+
+        }
+
+        #mts {
+            position: relative;
+            top: -1970px;
+            left: 590px;
+        }
+
+        #jm {
+            position: relative;
+            top: -1870px;
+            left: 250px;
+
+        }
+
+        #gp {
+            position: relative;
+            top: -2020px;
+            left: 590px;
+        }
+
+        #su {
+            position: relative;
+            top: -2115px;
+            left: 930px;
+        }
+
+        #sb {
+            position: relative;
+            top: -2090px; 
+            left: 590px;
+        }
+
+        #ra {
+            position: relative;
+            top: -2010px; 
+            left: 70px;
+        }
+
+        #n {
+            position: relative;
+            top: -2160px; 
+            left: 400px;
+        }
+
+        #ir {
+            position: relative;
+            top: -2280px;
+            left: 780px;
+        }
+
+        #ai {
+            position: relative;
+            top: -2375px;
+            left: 1110px;
+        }
+
+        #lm {
+            position: relative;
+            top: -2290px; 
+            left: 300px;
+        }
+
+        #ls {
+            position: relative;
+            top: -2410px;
+            left: 880px;
+        }
+
+        #ec {
+            position: relative;
+            top: -2250px;
+            left: 590px;
+        }
+        #jd {
+            position: relative;
+            top: -2150px;
+            left: 70px;
+        }
+        #bm {
+            position: relative;
+            top: -2270px;
+            left: 330px;
+        }
+        #ar {
+            position: relative;
+            top: -2390px;
+            left: 590px;
+        }
+        #mv {
+            position: relative;
+            top: -2510px;
+            left: 850px;
+        }
+        #lm2 {
+            position: relative;
+            top: -2640px;
+            left: 1110px;
+        }
+        #lk {
+            position: relative;
+            top: -2500px;
+            left: 150px;
+        }
+        #ts {
+            position: relative;
+            top: -2600px;
+            left: 400px;
+        }
+        #m {
+            position: relative;
+            top: -2720px;
+            left: 780px;
+        }
+        #tm {
+            position: relative;
+            top: -2865px;
+            left: 1030px;
+        }
+        #kt {
+            position: relative;
+            top: -2720px;
+            left: 590px;
+        }
+
+        #subs_b {
+            border: 1px solid black;
+            background-color: rgb(233, 250, 250);
+            text-align: center;
+            width: 20%;
+
+            position: relative;
+            top: -2650px; 
+            left: 340px;
+            
+        }
+        #subs_p {
+            border: 1px solid black;
+            background-color: rgb(233, 250, 250);
+            text-align: center;
+            width: 20%;
+
+            position: relative;
+            top: -2950px; 
+            left: 745px;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="overskrift">
+        <div id="ikon1"> <a href="https://www.fotmob.com/teams/8634/overview/barcelona"><img alt="Qries" src="Barcelona.png" alt="Barcelona ikon"></a></div>
+        <h1><b>6 - 1</b></h1>
+        <p>Aggrigate: 6 - 5</p>
+        <div id="ikon2"><a href="https://www.fotmob.com/teams/9847/overview/paris-saint-germain"><img alt="Qries" src="PSG.png" alt="PSG ikon"></a></div>
+    </div>
+
+    <div id="mål">
+        <div id="mål_overskrift"><h3>Goals</h3></div>
+        <div id="målb">
+            <p>L. Suàrez (Goal) 3</p>
+            <p>L. Kurzawa (Own Goal) 40</p>
+            <p>L. Messi (Goal Pen.) 50</p>
+            <p>Neymar (Goal) 88, (Goal Pen.) 90+1</p>
+            <p>S. Roberto (Goal) 90+5</p>
+        </div>
+        <div id="målp">
+            <p>E. Cavani (Goal) 62</p>
+        </div>
+    </div>
+
+    <div id="b_formasjon">
+        <p>Barcelona Formation: 3-1-4-2</p>
+    </div>
+
+
+    <div id="lineup">
+
+        <img src="football_field.png" width="100%" height="2000px" alt="bilde av fotballbane">
+
+        <div id="mts"><img src="Ter_Stegen.png" width="80px" height="80px" alt="Bilde av M. Ter Stegen"> <p>M. Ter Stegen 1 </p></div>
+        <div id="jm"><img src="Mascherano.png"  width="80px" height="80px" alt="Bilde av J. Mascherano"> <p>J. Mascherano 14</p></div>
+        <div id="gp"><img src="Piquè.png"  width="80px" height="80px" alt="Bilde av G. Piquè"> <p>G. Piquè 3 🟡</p></div>
+        <div id="su"><img src="Umtiti.png"  width="80px" height="80px" alt="Bilde av S. Umtiti"> <p>S. Umtiti 23</p></div>
+        <div id="sb"><img src="Busquets.png"  width="80px" height="80px" alt="Bilde av S. Busquets"> <p>S. Busquets 5 🟡</p></div>
+        <div id="ra"><img src="Alcantara2.png"  width="80px" height="80px" alt="Bilde av R. Alcantara"> <p>R. Alcantara 12🔻</p></div>
+        <div id="n"><img src="Neymar.png"  width="80px" height="80px" alt="Bilde av Neymar"> <p>Neymar 11🟡⚽⚽</p></div>
+        <div id="ir"><img src="Rakitic.png"  width="80px" height="80px" alt="Bilde av I. Rakitić"> <p>I. Rakitić 4 🟡🔻</p></div>
+        <div id="ai"><img src="Iniesta.png"  width="80px" height="80px" alt="Bilde av A. Iniesta"> <p>A. Iniesta 8🔻</p></div>
+        <div id="lm"><img src="Messi.png"  width="80px" height="80px" alt="Bilde av L. Messi"> <p>L. Messi 10⚽</p></div>
+        <div id="ls"><img src="Suàrez.png"  width="80px" height="80px" alt="Bilde av L. Suàrez"> <p>L. Suàrez 9 🟡⚽</p></div>
+        <div id="ec"><img src="Cavani.png"  width="80px" height="80px" alt="Bilde av E. Cavani"> <p>E. Cavani 9 🟡⚽</p></div>
+        <div id="jd"><img src="Draxler.png"  width="80px" height="80px" alt="Bilde av J. Draxler"> <p>J. Draxler 23 🟡🔻</p></div>
+        <div id="bm"><img src="Matuidi.png"  width="80px" height="80px" alt="Bilde av B. Matuidi"> <p>B. Matuidi 14🟡</p></div>
+        <div id="ar"><img src="Rabiot.png"  width="80px" height="80px" alt="Bilde av A. Rabiot"> <p>A. Rabiot 25</p></div>
+        <div id="mv"><img src="Verratti.png"  width="80px" height="80px" alt="Bilde av M. Verratti"> <p>M. Verratti 6🟡</p></div>
+        <div id="lm2"><img src="Moura.png"  width="80px" height="80px" alt="Bilde av L. Moura"> <p>L. Moura 7🔻</p></div>
+        <div id="lk"><img src="Kurzawa.png"  width="80px" height="80px" alt="Bilde av L. Kurzawa"> <p>L. Kurzawa 20 ⚽</p></div>
+        <div id="ts"><img src="Silva.png"  width="80px" height="80px" alt="Bilde av T. Silva"> <p>T. Silva 2</p></div>
+        <div id="m"><img src="Marquinhos.png"  width="80px" height="80px" alt="Bilde av Marquinhos"> <p>Marquinhos 5🟡</p></div>
+        <div id="tm"><img src="Meunier.png"  width="80px" height="80px" alt="Bilde av T. Meunier"> <p>T. Meunier 12🔻</p></div>
+        <div id="kt"><img src="Trapp.png"  width="80px" height="80px" alt="Bilde av K. Trapp"> <p>K. Trapp 1</p></div>
+
+    </div>
+
+    <div id="p_formasjon">
+        <p>PSG Formation: 4-5-1</p>
+    </div>
+
+    <div id="subs_b">
+        <p><b>Barcelona Subtitutes:</b></p>
+        <p>A. Turan ⬆️ </p>
+        <p>J. Cillesen</p>
+        <p>F. Alcàcer</p>
+        <p>J. Alba</p>
+        <p>L. Digne</p>
+        <p>S. Roberto ⬆️</p>
+        <p>A. Gomes ⬆️</p>
+    </div>
+
+    <div id="subs_p">
+        <p><b>Paris-Saint-Germain Subtitutes:</b></p>
+        <p>P. Kimpembe</p>
+        <p>G. Krychowiak ⬆️</p>
+        <p>J. Pastore</p>
+        <p>À. Di Maria ⬆️</p>
+        <p>A. Areola</p>
+        <p>S. Aurier ⬆️</p>
+        <p>H. Ben Arfa</p>
+    </div>
+    
+</body>
+</html>
