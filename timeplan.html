@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>Timeplan</title>
+
+    <style>
+
+        body {
+            background-image:url('tre_bakgrunn.jpg');
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+
+        thead > tr {
+            background-color: #3f4259;
+            color: #f6f7fa;
+        }
+
+        .historie {
+            background-color: rgb(182, 104, 104);
+        }
+
+        .norsk {
+            background-color: rgb(216, 188, 111);
+        }
+
+        .it {
+            background-color: rgb(150, 187, 221);
+        }
+
+        .fysikk {
+            background-color: rgb(185, 221, 150);
+        }
+
+        .rle {
+            background-color: pink;
+        }
+
+        .matte {
+            background-color: rgb(182, 135, 182);
+        }
+
+        .gym {
+            background-color: rgb(13, 184, 155);
+        }
+
+        .økt {
+            background-color: #3f4259;
+            color: #f6f7fa;
+        }
+
+        .fri {
+            background-color: rgb(228, 228, 228);
+        }
+
+        .overskrift {
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="tabelldiv">
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="overskrift" colspan="11">Martin Reistad Timeplan VG3</th>
+                </tr>
+                <tr>
+                    <th rowspan="2">Økt</th>
+                    <th colspan="2">Mandag</th>
+                    <th colspan="2">Tirsdag</th>
+                    <th colspan="2">Onsdag</th>
+                    <th colspan="2">Torsdag</th>
+                    <th colspan="2">Fredag</th>
+                </tr>
+
+                <tr>
+                    <th>A uke</th>
+                    <th>B uke</th>
+                    <th>A uke</th>
+                    <th>B uke</th>
+                    <th>A uke</th>
+                    <th>B uke</th>
+                    <th>A uke</th>
+                    <th>B uke</th>
+                    <th>A uke</th>
+                    <th>B uke</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="økt">1. Økt</td>
+                    <td class="matte">Matematikk R2</td>
+                    <td class="it" >IT1</td>
+                    <td class="it" colspan="2">IT1</td>
+                    <td class="norsk" colspan="2">Norsk</td>
+                    <td class="gym" colspan="2">Kroppsøving</td>
+                    <td class="fri">Ingen Økt</td>
+                    <td class="rle">Religion og etikk</td>
+                </tr>
+                <tr>
+                    <td class="økt">2. Økt</td>
+                    <td class="fysikk" colspan="2">Fysikk 2</td>
+                    <td class="rle" colspan="2">Religion og etikk</td>
+                    <td class="fri" colspan="2">Ingen Økt</td>
+                    <td class="it" colspan="2">IT1</td>
+                    <td class="matte" colspan="2">Matematikk R2</td>
+                </tr>
+                <tr>
+                    <td class="økt">3. Økt</td>
+                    <td class="fri" colspan="2">Ingen økt</td>
+                    <td class="norsk" colspan="2">Norsk</td>
+                    <td class="matte" colspan="2">Matematikk R2</td>
+                    <td class="fysikk" colspan="2">Fysikk 2</td>
+                    <td class="historie" colspan="2">Historie</td>
+                </tr>
+                <tr>
+                    <td class="økt">4. Økt</td>
+                    <td class="historie" colspan="2">Historie</td>
+                    <td class="norsk" >Norsk</td>
+                    <td class="fysikk">Fysikk 2</td>
+                    <td class="fri" colspan="2">Ingen Økt</td>
+                    <td class="fri" colspan="2">Ingen Økt</td>
+                    <td class="fri">Ingen Økt</td>
+                    <td class="norsk">Norsk</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+    
+</body>
+</html>
