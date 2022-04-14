@@ -4,12 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hjemmeside</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: black;
+    }
+    #top{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        color: white;
+        padding: 30px;
+    }
+    #hoved{
+        background-color: greenyellow;
+        padding: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nettside{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        height: 30px;
+        width: 80px;
+        border: 1px solid black;
+        border-radius: 10%;
+        background-color: rgb(0, 169, 0);
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    .nettside:hover{
+        background-color: yellow;
+    }
+</style>
 </head>
 <body>
-    <a href="cl.html">Champions League</a>
-    <a href="farger.html">Farger</a>
-    <a href="matte_spill.html">Mattespill</a>
+    <div id="top">
+        <h1>Martin sin hjemmeside</h1>
+    </div>
+    <div id="hoved">
+        <div class="nettside">
+            <a href="./cl/cl.html">Champions League</a>
+        </div>
+        <div class="nettside">
+            <a href="./farger/farger.html">Farger</a>
+        </div>
+        <div class="nettside">
+            <a href="./matte_spill/matte_spill.html">Mattespill</a>
+        </div>
+        <div class="nettside">
+            <a href="./timeplan/timeplan.html">Timeplan</a>
+        </div>
+        <div class="nettside">
+            <a href="./psg_barca/Barcelona_vs_PSG.html">PSG vs Barcelona</a>
+        </div>
+    </div>
+    <div id="bunn"></div>
     
 </body>
 </html>

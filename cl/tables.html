@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabeller</title>
+
+    <link rel="stylesheet" href="stilark_overskrift.css">
+
+    <style>
+        #tabeller > a{
+            border-bottom: 2px solid green;
+        }
+
+        h2{
+            margin: 20px;
+        }
+
+        .stat > th{
+            color: grey;
+        }
+
+        .videre{
+            border-left: 4px solid rgb(0, 185, 0);
+            padding-left: 3px;
+        }
+
+        .videre_3{
+            border-left: 4px solid yellow;
+            padding-left: 3px;
+        }
+
+        .ikke_videre{
+            padding-left: 5px;
+        }
+
+        .lagnavn{
+            width: 130px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid grey;
+        }
+
+        th, td {
+            border-bottom:1px solid rgb(200, 200, 200);
+            padding: 8px;
+        }
+
+        #tabeller{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .grp{
+            float: left;
+            margin: 20px auto;
+
+        }
+
+        #info_1_og_2{
+            border-left: 4px solid rgb(0, 185, 0);
+            margin: 5px 65px;
+            padding: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #info_3{
+            border-left: 4px solid yellow ;
+            margin: 5px 65px;
+            padding: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div id="overskrift">
+        <a href="index.html"><img src="cl_logo.png" width="120px" height="120px" alt="champions league logo"></a>
+
+        <h1>Champions <br> League</h1>
+
+        <div class="navbar">
+            <ul>
+                <li id="hjem"><a href="index.html">Hjem</a></li>
+                <li id="tidligere_vinnere"><a href="tidligere_vinnere.html">Historie</a></li>
+                <li id="tabeller"><a href="tables.html">Tabeller</a></li>
+                <li id="sluttspill"><a href="playoff.html">Sluttspill</a></li>
+                <li id="statistikk"><a href="stats.html">Statistikk</a></li>
+                <li id="kilder"><a href="kilder.html">Kilder</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="innhold">
+        <h2>Resultat etter ferdigspilt gruppespill</h2>
+
+            <div id="tabeller">
+                <div id="grp_a" class="grp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="10">Gruppe A</th>
+                            </tr>
+                            <tr class="stat">
+                                <th colspan="3">Lag</th>
+                                <th>SP</th>
+                                <th>S</th>
+                                <th>U</th>
+                                <th>T</th>
+                                <th>+/-</th>
+                                <th>MF</th>
+                                <th>PNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="videre">1</td>
+                                <td><img src="manchester_city.png" width="40px" height="40px" alt="Manchester City logo"></td>
+                                <td class="lagnavn">Manchester City</td>
+                                <td>6</td>
+                                <td>4</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>18-10</td>
+                                <td>8</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="videre">2</td>
+                                <td><img src="psg.png" width="40px" height="40px" alt="Paris Saint-Germain logo"></td>
+                                <td>Paris Saint-Germain</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>13-8</td>
+                                <td>5</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td class="videre_3">3</td>
+                                <td><img src="rb_leipzig.png" width="40px" height="40px" alt="RB Leipzig logo"></td>
+                                <td>RB Leipzig</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>15-14</td>
+                                <td>1</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="ikke_videre">4</td>
+                                <td><img src="club_brugge.png" width="40px" height="40px" alt="Club Brugge logo"></td>
+                                <td>Club Brugge</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>6-20</td>
+                                <td>-14</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="grp_b" class="grp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="10">Gruppe B</th>
+                            </tr>
+                            <tr class="stat">
+                                <th colspan="3">Lag</th>
+                                <th>SP</th>
+                                <th>S</th>
+                                <th>U</th>
+                                <th>T</th>
+                                <th>+/-</th>
+                                <th>MF</th>
+                                <th>PNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="videre">1</td>
+                                <td><img src="liverpool.png" width="40px" height="40px" alt="Liverpool logo"></td>
+                                <td class="lagnavn">Liverpool</td>
+                                <td>6</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>17-6</td>
+                                <td>11</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td class="videre">2</td>
+                                <td><img src="atletico_madrid.png" width="40px" height="40px" alt="Atletico Madrid logo"></td>
+                                <td>Atletico Madrid</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>7-8</td>
+                                <td>-1</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="videre_3">3</td>
+                                <td><img src="porto.png" width="40px" height="40px" alt="Porto logo"></td>
+                                <td>Porto</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4-11</td>
+                                <td>-7</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="ikke_videre">4</td>
+                                <td><img src="ac_milan.png" width="40px" height="40px" alt="AC Milan logo"></td>
+                                <td>AC Milan</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>6-9</td>
+                                <td>-3</td>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="grp_c" class="grp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="10">Gruppe C</th>
+                            </tr>
+                            <tr class="stat">
+                                <th colspan="3">Lag</th>
+                                <th>SP</th>
+                                <th>S</th>
+                                <th>U</th>
+                                <th>T</th>
+                                <th>+/-</th>
+                                <th>MF</th>
+                                <th>PNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="videre">1</td>
+                                <td><img src="ajax.png" width="40px" height="40px" alt="Ajax logo"></td>
+                                <td class="lagnavn">Ajax</td>
+                                <td>6</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>20-5</td>
+                                <td>15</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td class="videre">2</td>
+                                <td><img src="sporting.png" width="40px" height="40px" alt="Sporting logo"></td>
+                                <td>Sporting</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>14-12</td>
+                                <td>2</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td class="videre_3">3</td>
+                                <td><img src="dortmund.png" width="40px" height="40px" alt="Dortmund logo"></td>
+                                <td>Dortmund</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>10-11</td>
+                                <td>-1</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td class="ikke_videre">4</td>
+                                <td><img src="besiktas.png" width="40px" height="40px" alt="Besiktas logo"></td>
+                                <td>Besiktas</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>6</td>
+                                <td>3-19</td>
+                                <td>-16</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="grp_d" class="grp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="10">Gruppe D</th>
+                            </tr>
+                            <tr class="stat">
+                                <th colspan="3">Lag</th>
+                                <th>SP</th>
+                                <th>S</th>
+                                <th>U</th>
+                                <th>T</th>
+                                <th>+/-</th>
+                                <th>MF</th>
+                                <th>PNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="videre">1</td>
+                                <td><img src="real_madrid.png" width="40px" height="40px" alt="Real Madrid logo"></td>
+                                <td class="lagnavn">Real Madrid</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>14-3</td>
+                                <td>11</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="videre">2</td>
+                                <td><img src="inter_milan.png" width="40px" height="40px" alt="Inter Milan logo"></td>
+                                <td>Inter Milan</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>8-5</td>
+                                <td>3</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="videre_3">3</td>
+                                <td><img src="sheriff.png" width="40px" height="40px" alt="Sheriff logo"></td>
+                                <td>Sheriff</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>7-11</td>
+                                <td>-4</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="ikke_videre">4</td>
+                                <td><img src="shakhtar.png" width="40px" height="40px" alt="Shakhtar logo"></td>
+                                <td>Shakhtar</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>4</td>
+                                <td>2-12</td>
+                                <td>-10</td>
+                                <td>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="grp_e" class="grp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="10">Gruppe E</th>
+                            </tr>
+                            <tr class="stat">
+                                <th colspan="3">Lag</th>
+                                <th>SP</th>
+                                <th>S</th>
+                                <th>U</th>
+                                <th>T</th>
+                                <th>+/-</th>
+                                <th>MF</th>
+                                <th>PNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="videre">1</td>
+                                <td><img src="bayern_munchen.png" width="40px" height="40px" alt="Bayern Munchen logo"></td>
+                                <td class="lagnavn">Bayern Munchen</td>
+                                <td>6</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>22-3</td>
+                                <td>19</td>
+                                <td>18</td>
+                            </tr>
+                            <tr>
+                                <td class="videre">2</td>
+                                <td><img src="benfica.png" width="40px" height="40px" alt="Benfica logo"></td>
+                                <td>Benfica</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>7-9</td>
+                                <td>-2</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td class="videre_3">3</td>
+                                <td><img src="barcelona.png" width="40px" height="40px" alt="Barcelona logo"></td>
+                                <td>Barcelona</td>
+                                <td>6</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>2-9</td>
+                                <td>-7</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td class="ikke_videre">4</td>
+                                <td><img src="dynamo_kyiv.png" width="40px" height="40px" alt="Dynamo Kyiv logo"></td>
+                                <td>Dynamo Kyiv</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>1-11</td>
+                                <td>-10</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="grp_f" class="grp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="10">Gruppe F</th>
+                            </tr>
+                            <tr class="stat">
+                                <th colspan="3">Lag</th>
+                                <th>SP</th>
+                                <th>S</th>
+                                <th>U</th>
+                                <th>T</th>
+                                <th>+/-</th>
+                                <th>MF</th>
+                                <th>PNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="videre">1</td>
+                                <td><img src="manchester_united.png" width="40px" height="40px" alt="Manchester United logo"></td>
+                                <td class="lagnavn">Manchester United</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>11-8</td>
+                                <td>3</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td class="videre">2</td>
+                                <td><img src="villarreal.png" width="40px" height="40px" alt="Villarreal logo"></td>
+                                <td>Villarreal</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>12-9</td>
+                                <td>3</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="videre_3">3</td>
+                                <td><img src="atalanta.png" width="40px" height="40px" alt="Atalanta logo"></td>
+                                <td>Atalanta</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>12-13</td>
+                                <td>-1</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="ikke_videre">4</td>
+                                <td><img src="young_boys.png" width="40px" height="40px" alt="Young Boys logo"></td>
+                                <td>Young Boys</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>7-12</td>
+                                <td>-5</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="grp_g" class="grp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="10">Gruppe G</th>
+                            </tr>
+                            <tr class="stat">
+                                <th colspan="3">Lag</th>
+                                <th>SP</th>
+                                <th>S</th>
+                                <th>U</th>
+                                <th>T</th>
+                                <th>+/-</th>
+                                <th>MF</th>
+                                <th>PNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="videre">1</td>
+                                <td><img src="lille.png" width="40px" height="40px" alt="Lille logo"></td>
+                                <td class="lagnavn">Lille</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>7-4</td>
+                                <td>3</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td class="videre">2</td>
+                                <td><img src="salzburg.png" width="40px" height="40px" alt="Salzburg logo"></td>
+                                <td>Salzburg</td>
+                                <td>6</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>8-6</td>
+                                <td>2</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td class="videre_3">3</td>
+                                <td><img src="sevilla.png" width="40px" height="40px" alt="Sevilla logo"></td>
+                                <td>Sevilla</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>5-5</td>
+                                <td>0</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td class="ikke_videre">4</td>
+                                <td><img src="wolfsburg.png" width="40px" height="40px" alt="Wolfsburg logo"></td>
+                                <td>Wolfsburg</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>5-10</td>
+                                <td>-5</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="grp_h" class="grp">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="10">Gruppe H</th>
+                            </tr>
+                            <tr class="stat">
+                                <th colspan="3">Lag</th>
+                                <th>SP</th>
+                                <th>S</th>
+                                <th>U</th>
+                                <th>T</th>
+                                <th>+/-</th>
+                                <th>MF</th>
+                                <th>PNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="videre">1</td>
+                                <td><img src="juventus.png" width="40px" height="40px" alt="Juventus logo"></td>
+                                <td class="lagnavn">Juventus</td>
+                                <td>6</td>
+                                <td>5</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>10-6</td>
+                                <td>4</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="videre">2</td>
+                                <td><img src="chelsea.png" width="40px" height="40px" alt="Chelsea logo"></td>
+                                <td>Chelsea</td>
+                                <td>6</td>
+                                <td>4</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>13-4</td>
+                                <td>9</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td class="videre_3">3</td>
+                                <td><img src="zenit.png" width="40px" height="40px" alt="Zenit logo"></td>
+                                <td>Zenit</td>
+                                <td>6</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>10-10</td>
+                                <td>0</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td class="ikke_videre">4</td>
+                                <td><img src="malmo.png" width="40px" height="40px" alt="Malmö logo"></td>
+                                <td>Malmö</td>
+                                <td>6</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>5</td>
+                                <td>1-14</td>
+                                <td>-13</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="info_1_og_2">
+                <p>Avansement til sluttspill</p>
+            </div>
+            <div id="info_3">
+                <p>Avansement til Europaligaen</p>
+            </div>
+         
+    </div>
+    
+</body>
+</html>
