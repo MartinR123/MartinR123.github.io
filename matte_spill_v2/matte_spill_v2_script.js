@@ -153,4 +153,4 @@ if (localStorage.antallBesok) {
 else {
   localStorage.antallBesok = 1;
 }
-h5El.innerHTML = "Det har vært " + localStorage.antallBesok + " besøk på denne nettsiden."; 
+h5El.innerHTML = "Du har besøkt denne siden " + localStorage.antallBesok + " ganger."; 
