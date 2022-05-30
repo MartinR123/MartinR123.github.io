@@ -42,10 +42,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
 
     <script type="module">
-        // Import the functions you need from the SDKs you need
-        //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
       
         // Your web app's Firebase configuration
         const firebaseConfig = {
@@ -63,6 +59,7 @@
         // Lager en referanse til databasen
         let db = firebase.firestore();
 
+        //lager variabler til forskjellige elementer på nettsiden
         let ledertavleEl = document.querySelector("#ledertavle")
         let navnEl = document.querySelector("#navn")
         let registrerBtn = document.querySelector("#registrer")
@@ -72,10 +69,6 @@
 
         // Funksjon som legger til ny bruker i databasen
         function addUser(){
-            /* console.log(fornavnEl.value)
-            console.log(etternavnEl.value)
-            console.log(alderEl.value) */
-
             console.log(hoy_poeng)
 
             db.collection("ledertavle").add({
@@ -91,7 +84,7 @@
 
 
         function getUsers(){
-            // Henter data. Når dataene er ferdig hentet, starter "then"-biten
+            // Henter data
             db.collection("ledertavle").orderBy("poeng", "desc").get().then((snapshot) => {
                 // Henter ut dokumentene
                 let dokumenter = snapshot.docs;
@@ -104,11 +97,9 @@
                 // Går gjennom dokumentene
                 for(let i=0; /*i<dokumenter.length*/ i<5; i++){
                     let ledertavle = dokumenter[i].data()
-
-                    ledertavleEl.innerHTML += `<h2 id="plasseringPlass" class="lt">Plass ${i+1}:<h2>`
-
                     console.log(ledertavle)
-
+                    
+                    ledertavleEl.innerHTML += `<h2 id="plasseringPlass" class="lt">Plass ${i+1}:<h2>`
                     ledertavleEl.innerHTML += `<p id="navnPlass" class="lt">Navn: ${ledertavle.navn}<p>`
                     ledertavleEl.innerHTML += `<p id="poengPlass" class="lt">Poeng: ${ledertavle.poeng}<p>`
                 }
@@ -117,8 +108,8 @@
         
 
 
+        //sørger for at alt som skal vises er synlig når ledertavlen er lukket  
         let aapne_ledertavleEl = document.querySelector("#aapne_ledertavle")
-
         function aapne_ledertavle() {
             document.getElementById('ledertavle').style.display = "flex";
             document.getElementById('spillet').style.display = "none";
@@ -126,11 +117,10 @@
             document.getElementById('aapne_ledertavle').style.display = "none";
             document.getElementById('lukk_ledertavle').style.display = "block";
         }
-
         aapne_ledertavleEl.addEventListener('click', aapne_ledertavle)
 
+        //sørger for at alt som skal vises er synlig når ledertavlen er åpnet  
         let lukk_ledertavleEl = document.querySelector("#lukk_ledertavle")
-
         function lukk_ledertavle(){
             document.getElementById('ledertavle').style.display = "none";
             document.getElementById('spillet').style.display = "flex";
@@ -139,14 +129,9 @@
             document.getElementById('lukk_ledertavle').style.display = "none";
 
         }
-
         lukk_ledertavleEl.addEventListener('click', lukk_ledertavle)
 
-
-
         getUsers()
-
-
       </script>
       <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
     
