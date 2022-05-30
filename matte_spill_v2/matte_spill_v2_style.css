@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(200, 255, 252);
+}
+#hoved{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#spillet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#registrering{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+#lukk_ledertavle{
+    display: none;
+}
+
+.lt{
+    background-color: white;
+}
+
+#plasseringPlass{
+    margin-bottom: -15px;
+}
+
+
+
+
+h1, h2, button{
+    margin: 10px;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+h1{
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button{
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(210, 210, 210);
+}
+#alternativer{
+    display: flex;
+    justify-content: space-around;
+}
+#neste{
+    margin: auto;
+    margin-top: -110px;
+}
+
+
+#ledertavle{
+    /*height: 100%;*/
+    max-width: 300px;
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid black;
+    background-color: white;
+
+    margin: auto;
+    padding: 10px;
+
+    display: none;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mattespill</title>
+    <link rel="stylesheet" href="matte_spill_v2_style.css">
+</head>
+<body>
+    <div id="hoved">
+        <div id="registrering">
+            <label for="navn">Navn:</label> <br>
+            <input type="text" id="navn" placeholder="Skriv inn navnet ditt">
+            <button id="registrer">Registrer poengsum</button>
+        </div>
+            
+        <button id="aapne_ledertavle">Ledertavle</button>
+        <button id="lukk_ledertavle">Lukk ledertavle</button>
+
+        <h5></h5>
+
+        <div id="ledertavle"></div>
+            <div id="spillet">
+                <h2 id="hoy_poeng">Høyeste poengsum: 0</h2>
+                <h2 id="poeng">Poeng: 0</h2>
+                <h1 id="tall"></h1>
+                <h2>Alternativer:</h3>
+                <div id="alternativer">
+                    <button id="primtall" class="knapp">Primtall</button>
+                    <button id="del3" class="knapp">Går opp i 3</button>
+                    <button id="del5" class="knapp">Går opp i 5</button>
+                    <button id="ingen" class="knapp">Ingen</button>
+                </div>
+            </div>
+        
+    </div>
+    
+    
+    <script src="matte_spill_v2_script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        //import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyChXSDE9p-wriuiX2tyTz4rf0TBN7TbAjk",
+            authDomain: "martinr-5df7e.firebaseapp.com",
+            projectId: "martinr-5df7e",
+            storageBucket: "martinr-5df7e.appspot.com",
+            messagingSenderId: "144028319549",
+            appId: "1:144028319549:web:1c531784733a28af3f4f54"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Lager en referanse til databasen
+        let db = firebase.firestore();
+
+        let ledertavleEl = document.querySelector("#ledertavle")
+        let navnEl = document.querySelector("#navn")
+        let registrerBtn = document.querySelector("#registrer")
+
+        registrerBtn.addEventListener("click", addUser)
+
+
+        // Funksjon som legger til ny bruker i databasen
+        function addUser(){
+            /* console.log(fornavnEl.value)
+            console.log(etternavnEl.value)
+            console.log(alderEl.value) */
+
+            console.log(hoy_poeng)
+
+            db.collection("ledertavle").add({
+                navn: navnEl.value,
+                poeng: hoy_poeng
+            })
+
+            // Tømmer input felt
+            navnEl.value = ""
+            
+            getUsers()
+        }
+
+
+        function getUsers(){
+            // Henter data. Når dataene er ferdig hentet, starter "then"-biten
+            db.collection("ledertavle").orderBy("poeng", "desc").get().then((snapshot) => {
+                // Henter ut dokumentene
+                let dokumenter = snapshot.docs;
+
+                // Skriver dokumentene til konsollen
+                console.log(dokumenter);
+
+                ledertavleEl.innerHTML = ""
+
+                // Går gjennom dokumentene
+                for(let i=0; /*i<dokumenter.length*/ i<5; i++){
+                    let ledertavle = dokumenter[i].data()
+
+                    ledertavleEl.innerHTML += `<h2 id="plasseringPlass" class="lt">Plass ${i+1}:<h2>`
+
+                    console.log(ledertavle)
+
+                    ledertavleEl.innerHTML += `<p id="navnPlass" class="lt">Navn: ${ledertavle.navn}<p>`
+                    ledertavleEl.innerHTML += `<p id="poengPlass" class="lt">Poeng: ${ledertavle.poeng}<p>`
+                }
+            });
+        }
+        
+
+
+        let aapne_ledertavleEl = document.querySelector("#aapne_ledertavle")
+
+        function aapne_ledertavle() {
+            document.getElementById('ledertavle').style.display = "flex";
+            document.getElementById('spillet').style.display = "none";
+            document.getElementById('registrering').style.display = "flex";
+            document.getElementById('aapne_ledertavle').style.display = "none";
+            document.getElementById('lukk_ledertavle').style.display = "block";
+        }
+
+        aapne_ledertavleEl.addEventListener('click', aapne_ledertavle)
+
+        let lukk_ledertavleEl = document.querySelector("#lukk_ledertavle")
+
+        function lukk_ledertavle(){
+            document.getElementById('ledertavle').style.display = "none";
+            document.getElementById('spillet').style.display = "flex";
+            document.getElementById('registrering').style.display = "none";
+            document.getElementById('aapne_ledertavle').style.display = "block";
+            document.getElementById('lukk_ledertavle').style.display = "none";
+
+        }
+
+        lukk_ledertavleEl.addEventListener('click', lukk_ledertavle)
+
+
+
+        getUsers()
+
+
+      </script>
+      <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    
+</body>
+</html>
